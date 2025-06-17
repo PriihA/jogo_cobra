@@ -24,6 +24,13 @@ cobra.forEach(segmento => {
     elemento.classList.add('snake');
     tabuleiro.appendChild(elemento);
 });
+const elementoComida = document.createElement('div');
+elementoComida.style.gridRowStart = comida.y;
+elementoComida.style.gridColumnStart = comida.x;
+elementoComida.classList.add('food');
+tabuleiro.appendChild(elementoComida);
+}
+
 
  function gerarComida(){
 let novaComida;
@@ -36,4 +43,3 @@ while (!novaComida || posicaoOcupada){
 
  }
 
-}
